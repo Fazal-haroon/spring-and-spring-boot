@@ -7,6 +7,6 @@ public class GameRunner {
     }
 
     public void run() {
-        System.out.println("Running game: "+marioGame);
+        System.out.println("Running game: " + marioGame);
     }
 }

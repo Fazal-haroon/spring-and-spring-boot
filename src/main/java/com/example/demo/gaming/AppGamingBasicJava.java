@@ -2,10 +2,11 @@ package com.example.demo.gaming;
 
 public class AppGamingBasicJava {
     public static void main(String[] args) {
-//        var marioGame = new MarioGame();
-        var superContraGame = new SuperContraGame();
+//        var gaming = new MarioGame();
+        var gaming = new PacmanGame();
+//        var gaming = new SuperContraGame();
 //        var gameRunner = new GameRunner(marioGame);
-        var gameRunner = new GameRunner(superContraGame);
+        var gameRunner = new GameRunner(gaming);
         gameRunner.run();
     }
 }

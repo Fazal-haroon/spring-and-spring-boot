@@ -1,6 +1,9 @@
-package com.example.demo.gaming;
+package com.example.demo;
 
-public class AppGamingBasicJava {
+import com.example.demo.gaming.GameRunner;
+import com.example.demo.gaming.PacmanGame;
+
+public class App01GamingBasicJava {
     public static void main(String[] args) {
 //        var gaming = new MarioGame();
         var gaming = new PacmanGame(); //Object creation

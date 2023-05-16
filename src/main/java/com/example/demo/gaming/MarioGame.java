@@ -1,6 +1,6 @@
 package com.example.demo.gaming;
 
-public class MarioGame implements GamingConsole{
+public class MarioGame implements GamingConsole {
 
     public void up() {
         System.out.println("Jump");

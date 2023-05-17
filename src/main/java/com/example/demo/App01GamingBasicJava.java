@@ -5,6 +5,7 @@ import com.example.demo.gaming.PacmanGame;
 
 public class App01GamingBasicJava {
     public static void main(String[] args) {
+        String a = "Java";
 //        var gaming = new MarioGame();
         var gaming = new PacmanGame(); //Object creation
 //        var gaming = new SuperContraGame();

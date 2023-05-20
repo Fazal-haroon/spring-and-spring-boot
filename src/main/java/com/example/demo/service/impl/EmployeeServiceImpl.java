@@ -21,4 +21,9 @@ public class EmployeeServiceImpl implements EmployeeService {
         employeeList.add(employee);
         return employee;
     }
+
+    @Override
+    public List<Employee> getAllEmployees() {
+        return employeeList;
+    }
 }

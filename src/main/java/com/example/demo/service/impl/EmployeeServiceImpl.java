@@ -1,5 +1,6 @@
 package com.example.demo.service.impl;
 
+import com.example.demo.error.EmployeeNotFoundException;
 import com.example.demo.model.Employee;
 import com.example.demo.service.EmployeeService;
 import org.springframework.stereotype.Service;
@@ -38,6 +39,6 @@ public class EmployeeServiceImpl implements EmployeeService {
                 .stream()
                 .filter(employee -> employee.getEmployeeId().equals(id))
                 .findFirst()
-                .orElseThrow(() -> new RuntimeException("Employee not found with ID: " + id));
+                .orElseThrow(() -> new EmployeeNotFoundException("Employee not found with ID: " + id));
     }
 }

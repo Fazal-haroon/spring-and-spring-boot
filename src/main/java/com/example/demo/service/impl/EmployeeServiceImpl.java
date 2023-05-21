@@ -35,10 +35,15 @@ public class EmployeeServiceImpl implements EmployeeService {
 //                .filter(employee -> employee.getEmployeeId().equals(id))
 //                .findFirst()
 //                .get();
+//        return employeeList
+//                .stream()
+//                .filter(employee -> employee.getEmployeeId().equals(id))
+//                .findFirst()
+//                .orElseThrow(() -> new EmployeeNotFoundException("Employee not found with ID: " + id));
         return employeeList
                 .stream()
                 .filter(employee -> employee.getEmployeeId().equals(id))
                 .findFirst()
-                .orElseThrow(() -> new EmployeeNotFoundException("Employee not found with ID: " + id));
+                .orElseThrow(() -> new RuntimeException("Employee not found with ID: " + id));
     }
 }

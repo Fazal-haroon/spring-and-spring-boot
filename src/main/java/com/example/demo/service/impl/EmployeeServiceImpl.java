@@ -29,6 +29,15 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee getEmployeeById(String id) {
-        return employeeList.stream().filter(employee -> employee.getEmployeeId().equals(id)).findFirst().get();
+//        return employeeList
+//                .stream()
+//                .filter(employee -> employee.getEmployeeId().equals(id))
+//                .findFirst()
+//                .get();
+        return employeeList
+                .stream()
+                .filter(employee -> employee.getEmployeeId().equals(id))
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException("Employee not found with ID: " + id));
     }
 }

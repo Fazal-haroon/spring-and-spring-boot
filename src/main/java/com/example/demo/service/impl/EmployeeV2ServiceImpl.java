@@ -45,7 +45,10 @@ public class EmployeeV2ServiceImpl implements EmployeeService {
 
     @Override
     public Employee getEmployeeById(String id) {
-        return null;
+        EmployeeEntity employee = employeeRepository.findById(id).get();
+        Employee employee1 = new Employee();
+        BeanUtils.copyProperties(employee, employee1);
+        return employee1;
     }
 
     @Override
